@@ -10,10 +10,11 @@ Load the JMH dependencies in your WORKSPACE file
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
-    name = "rules_jmh",
-    strip_prefix = "buchgr-rules_jmh-cf2fcbe",
-    url = "https://github.com/buchgr/rules_jmh/zipball/cf2fcbe974219973fe7bf7168021eb67d5690482",
-    sha256 = "c5b898ea1e40524b867c2fc88a27b3ae84b5fc7265b0e129b709a47abe961280",
+  name = "rules_jmh",
+  strip_prefix = "buchgr-rules_jmh-6ccf8d7",
+  url = "https://github.com/buchgr/rules_jmh/zipball/6ccf8d7b270083982e5c143935704b9f3f18b256",
+  type = "zip",
+  sha256 = "dbb7d7e5ec6e932eddd41b910691231ffd7b428dff1ef9a24e4a9a59c1a1762d",
 )
 
 load("@rules_jmh//:deps.bzl", "rules_jmh_deps")
