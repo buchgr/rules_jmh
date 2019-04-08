@@ -16,8 +16,10 @@ http_archive(
     sha256 = "c5b898ea1e40524b867c2fc88a27b3ae84b5fc7265b0e129b709a47abe961280",
 )
 
-load("@rules_jmh//:defs.bzl", "rules_jmh_dependencies")
-rules_jmh_dependencies()
+load("@rules_jmh//:deps.bzl", "rules_jmh_deps")
+rules_jmh_deps()
+load("@rules_jmh//:defs.bzl", "rules_jmh_maven_deps")
+rules_jmh_maven_deps()
 ```
 
 You can specify JMH benchmarks by using the `jmh_java_benchmarks` rule. It takes the same arguments as `java_binary` except for `main_class`. One can specify one or more JMH benchmarks in the `srcs` attribute.

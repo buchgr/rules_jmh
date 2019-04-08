@@ -1,1 +1,1 @@
-exports_files(["defs.bzl"])
+exports_files(["defs.bzl", "deps.bzl"])
