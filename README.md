@@ -23,6 +23,17 @@ load("@rules_jmh//:defs.bzl", "rules_jmh_maven_deps")
 rules_jmh_maven_deps()
 ```
 
+`rules_jmh_maven_deps` accepts extra arguments, for example:
+
+```python
+
+# Download JMH source JARs
+rules_jmh_maven_deps(fetch_sources = True)
+
+# Use another version
+rules_jmh_maven_deps(version = "1.21")
+```
+
 You can specify JMH benchmarks by using the `jmh_java_benchmarks` rule. It takes the same arguments as `java_binary` except for `main_class`. One can specify one or more JMH benchmarks in the `srcs` attribute.
 
 

@@ -1,8 +1,9 @@
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 def rules_jmh_maven_deps(
-    jmh_version = "1.21",
-    repositories = ["https://repo1.maven.org/maven2"]):
+    jmh_version = "1.23",
+    repositories = ["https://repo1.maven.org/maven2"],
+    **kwargs):
     """Loads the maven dependencies of rules_jmh.
 
     Args:
@@ -18,6 +19,7 @@ def rules_jmh_maven_deps(
             "org.openjdk.jmh:jmh-generator-annprocess:{}".format(jmh_version),
         ],
         repositories = repositories,
+        **kwargs
     )
 
 def jmh_java_benchmarks(name, srcs, deps=[], tags=[], plugins=[], **kwargs):
