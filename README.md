@@ -11,10 +11,10 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
   name = "rules_jmh",
-  strip_prefix = "buchgr-rules_jmh-6ccf8d7",
+  strip_prefix = "rules_jmh-6ccf8d7b270083982e5c143935704b9f3f18b256",
   url = "https://github.com/buchgr/rules_jmh/archive/6ccf8d7b270083982e5c143935704b9f3f18b256.zip",
   type = "zip",
-  sha256 = "dbb7d7e5ec6e932eddd41b910691231ffd7b428dff1ef9a24e4a9a59c1a1762d",
+  sha256 = "dd7135b2673db31ffc38959bb8175ab2ee604eda6057d43014f69ea7e896ba6c",
 )
 
 load("@rules_jmh//:deps.bzl", "rules_jmh_deps")
